@@ -3,10 +3,14 @@ $(document).ready(function(){
 	var First = [];
 
 	$("#first img").each(function(){
-    	First.push($(this).attr("class"))});
+		First.push($(this).attr("class"))});
 
 	console.log(First);
 	console.log((First[2]));
+
+$.each([52, 97], function(index, value) {
+  alert(index + ': ' + value);
+});
 
 
 	/* The Goal
@@ -23,26 +27,26 @@ $(document).ready(function(){
 		})};
 	*/
 
- 	$(".img1").click(function() {
-      $(this).hide();
-      $(".img2").show();
-    	});
- 	$(".img2").click(function() {
-      $(this).hide();
-      $(".img3").show();
-    	});
- 	$(".img3").click(function() {
-      $(this).hide();
-      $(".img4").show();
-      	});
-    $(".img4").click(function() {
-      $(this).hide();
-      $(".img5").show();
-    	});
-    $(".img5").click(function() {
-      $(this).hide();
-      $(".img1").show();
-    	});
+	$(".img1").click(function() {
+	  $(this).hide();
+	  $(".img2").show();
+		});
+	$(".img2").click(function() {
+	  $(this).hide();
+	  $(".img3").show();
+		});
+	$(".img3").click(function() {
+	  $(this).hide();
+	  $(".img4").show();
+		});
+	$(".img4").click(function() {
+	  $(this).hide();
+	  $(".img5").show();
+		});
+	$(".img5").click(function() {
+	  $(this).hide();
+	  $(".img1").show();
+		});
 });
  
 
