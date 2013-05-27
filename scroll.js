@@ -1,8 +1,27 @@
 $(document).ready(function(){
 
-	/*$(".img1").click(function(){
-		$(".img1").attr("src","test2.jpg");
-	});*/
+	var First = [];
+
+	$("#first img").each(function(){
+    	First.push($(this).attr("class"))});
+
+	console.log(First);
+	console.log((First[2]));
+
+
+	/* The Goal
+
+	for (var i=0; i<=First.length; i++) {
+		$(First[i]).click(function() {
+			$(this).hide();
+			$(First[i++]).show();
+		if (i == First.length)
+			{$(First[i]).click(function() {
+			$(this).hide();
+			$(First[0]).show();
+			})};
+		})};
+	*/
 
  	$(".img1").click(function() {
       $(this).hide();
@@ -20,19 +39,16 @@ $(document).ready(function(){
       $(this).hide();
       $(".img5").show();
     	});
+    $(".img5").click(function() {
+      $(this).hide();
+      $(".img1").show();
+    	});
 });
-
-
-
-/* goal: change image on click, have a caption adjacent to the image, fake-it-light box, arrow navigation. 
-style the cursor to be clear nav
  
-this changed everything
-	$("#first").click(function(){
-		$(".img").each(function(){
-			console.log($(this).attr("src"));
-			$(this).attr("src", parent;		
-		});
-	});
-or count + file name > make a string?
-uses CSS display:none/display:block to rotate through dynamically generate text on click != display:none  make social icons*/
+
+//need to scale for other thumbnails?
+//need a condition that checks if it's the last image - loop back to #1
+//need to accept keyboard arrowing at somepoint? nice to have
+
+// goal: change image on click, have a caption adjacent to the image
+
