@@ -1,0 +1,12 @@
+body{
+	font-family: Arial;
+	font-style: bold;
+	font-size: 50px;
+	width:100%;
+}
+
+#gallery {width:500px;height:500px;margin-right: auto; margin-left: auto; text-align: center; cursor:crosshair;}
+
+.img1 {max-width:30%;max-height:30%;}
+.img2 {max-width:30%;max-height:30%;}
+.img3 {max-width:30%;max-height:30%;}
