@@ -9,6 +9,17 @@ function zip(arrayA, arrayB) {
 
 $(document).ready(function(){
 
+	//expand thumbnail
+	$("#first").click(function(){
+		$(this).css("opacity",".5");
+	});
+
+	//reduce thumbnail
+	$("#backdrop").click(function(){
+		$("#first").css("opacity","1");
+	});
+
+	//below loops over images in div
 	var First = [];
 
 	$("#first img").each(function(){
@@ -26,18 +37,23 @@ $(document).ready(function(){
 	FirstArr2.push(FirstVal);
 
 	var ArrResult = zip(FirstArr,FirstArr2);
+	console.log(ArrResult);
+
 
 	$.each(ArrResult, function(index, value) {
-	  $(value[0]).click(function() {
-		$(this).hide();
-		$(value[1]).show();
-		});
+		$(value[0]).click(function() {
+			$(this).hide();
+			$(value[1]).show();
+			});
 	});
 
 });
 
-//need to scale for other thumbnails?
-//need a condition that checks if it's the last image - loop back to #1
-//need to accept keyboard arrowing at somepoint? nice to have
-// goal: change image on click, have a caption adjacent to the image
+//wrap into a function that accepts a div as input
+//opacity hover on image? need to build in actually grid to get scaling
+//need to add thumbnail-basic lightbox uses jquery to change a divs .css("displace","block") to show/not show
+//close big image = click on background and change css back to thumbnail>bound to overall div!
+//need a spacer? right now skipping over first image? or the first image is always a thumb? because on click is trigger 2 things
+//add html image caption to the side of each image, with title and description.
+//others: use separate thumbnail images, no css, then inject css with jquery with the next one? would also solve event binding?
 
