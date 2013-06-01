@@ -10,8 +10,9 @@ function zip(arrayA, arrayB) {
 $(document).ready(function(){
 
 	//expand thumbnail
-	$("#first img").click(function(){
-		$("#first img").css("height","600");
+	$("#first img").click(function(event){
+		event.stopImmediatePropagation();
+		$("#first img").css("height","500");
 	});
 
 	//reduce thumbnail
