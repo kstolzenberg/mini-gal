@@ -10,13 +10,15 @@ function zip(arrayA, arrayB) {
 $(document).ready(function(){
 
 	//expand thumbnail
-	$("#first").click(function(){
-		$(this).css("opacity",".5");
+	$("#first").click(function(e){
+		if (e.target !== this)
+			return;
+		$("#first").css("background","orange");
 	});
 
 	//reduce thumbnail
 	$("#backdrop").click(function(){
-		$("#first").css("opacity","1");
+		$("#first").css("background","white");
 	});
 
 	//below loops over images in div
@@ -50,7 +52,7 @@ $(document).ready(function(){
 });
 
 //wrap into a function that accepts a div as input
-//opacity hover on image? need to build in actually grid to get scaling
+//opacity hover on image? need to build in actually grid to get scale
 //need to add thumbnail-basic lightbox uses jquery to change a divs .css("displace","block") to show/not show
 //close big image = click on background and change css back to thumbnail>bound to overall div!
 //need a spacer? right now skipping over first image? or the first image is always a thumb? because on click is trigger 2 things

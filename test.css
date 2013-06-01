@@ -5,10 +5,10 @@ body{
 	width:100%;
 }
 
-#gallery {width:500px;height:500px;margin-right: auto; margin-left: auto; text-align: center; cursor:e-resize;z-index:-2;}
+#gallery {width:500px;height:500px;margin-right: auto; margin-left: auto; text-align: center; cursor:e-resize;}
 
-#first img {width:30%;height:30%; z-index:1;}
-figcaption {font-size: 30%;float:right;}
+/*#first img {width:30%;height:30%; z-index:1;}*/
+#first{}
 
 #backdrop {
 	position: absolute;
