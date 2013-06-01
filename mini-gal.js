@@ -10,15 +10,13 @@ function zip(arrayA, arrayB) {
 $(document).ready(function(){
 
 	//expand thumbnail
-	$("#first").click(function(e){
-		if (e.target !== this)
-			return;
-		$("#first").css("background","orange");
+	$("#first img").click(function(){
+		$("#first img").css("height","600");
 	});
 
 	//reduce thumbnail
 	$("#backdrop").click(function(){
-		$("#first").css("background","white");
+		$("#first img").css("height","200");
 	});
 
 	//below loops over images in div
