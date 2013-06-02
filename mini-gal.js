@@ -10,8 +10,7 @@ function zip(arrayA, arrayB) {
 $(document).ready(function(){
 
 	//expand thumbnail
-	$("#first img").click(function(event){
-		event.stopImmediatePropagation();
+	$("#first img").click(function(){
 		$("#first img").css("height","500");
 	});
 
@@ -21,6 +20,7 @@ $(document).ready(function(){
 	});
 
 	//below loops over images in div
+	
 	var First = [];
 
 	$("#first img").each(function(){
@@ -47,6 +47,7 @@ $(document).ready(function(){
 			$(value[1]).show();
 			});
 	});
+	
 
 });
 

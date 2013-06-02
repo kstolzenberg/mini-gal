@@ -5,10 +5,9 @@ body{
 	width:100%;
 }
 
-#gallery {width:500px;height:500px;margin-right: auto; margin-left: auto; text-align: center; cursor:e-resize;}
-
-/*#first img {width:30%;height:30%; z-index:1;}*/
-#first{}
+#gallery {width:500px;height:500px;position:static;margin-right: auto; margin-left: auto; text-align: center; cursor:e-resize;}
+#project1{float:left;border:1px dashed black;}
+#project2{float:left;border:1px dashed black;}
 
 #backdrop {
 	position: absolute;
@@ -19,31 +18,6 @@ body{
 	z-index: -1;
 	cursor:crosshair;
 }
-
-/* 
-.box{
-	position:absolute;
-	top:20%;
-	left:30%;
-	width:500px;
-	height:300px;
-	background:#ffffff;
-	z-index:51;
-	padding:10px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-moz-box-shadow:0px 0px 5px #444444;
-	-webkit-box-shadow:0px 0px 5px #444444;
-	box-shadow:0px 0px 5px #444444;
-	display:none;
-}
- 
-.close{
-	float:right;
-	margin-right:6px;
-	cursor:pointer;
-}*/
 
 
 
