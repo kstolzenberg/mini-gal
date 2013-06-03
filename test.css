@@ -5,9 +5,10 @@ body{
 	width:100%;
 }
 
-#gallery {width:500px;height:500px;position:static;margin-right: auto; margin-left: auto; text-align: center; cursor:e-resize;}
+#gallery {width:606px;height:600px;position:static;margin-right: auto; margin-left: auto; text-align: center; cursor:e-resize;}
 #project1{float:left;border:1px dashed black;}
 #project2{float:left;border:1px dashed black;}
+#project3{float:left;border:1px dashed black;}
 
 #backdrop {
 	position: absolute;

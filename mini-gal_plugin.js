@@ -26,7 +26,8 @@
 		//this this should only pull by div, but is pulling all images! try .each? don't pull img in html?
 		//review logs and dynamic html - strange things are getting applied
 		//don't know if display with fuck with things?
-		$(this).each(function(){
+		//worked as ("project1" img) explicit target and image.
+		$(this).children("img").each(function(){
 			arrName.push($(this).attr("class"))
 			});
 

@@ -7,7 +7,9 @@
 		<link href="test.css" rel="stylesheet" type="text/css" media="all">
 		<script type="text/javascript">
 	  		$(document).ready(function(){
-				$("#gallery div img").mini_gal();
+				$("#gallery div").each(function(){
+					$(this).mini_gal();
+				});
 			});
 		</script>
 	</head>
@@ -17,20 +19,25 @@
 	<body>
 		<div id="backdrop"></div>
 		<div id="gallery"> 
-			<p>◍ mini-gal ◍</p>
+			<p>♒ mini-gal ♒</p>
 			<!--change img class to single name once debugged, need same style, projects too prolly?-->
 			<div id ="project1">
-				<img class="img1" src = "test1.jpg" alt="oh no" height="200" width="auto">
-				<img class="img2" src = "test2.jpg" alt="oh no" style="display:none;" height="200" width="auto">
-				<img class="img3" src = "test3.jpg" alt="oh no" style="display:none;"height="200" width="auto">
-				<img class="img4" src = "test4.jpg" alt="oh no" style="display:none;"height="200" width="auto">
-				<img class="img5" src = "test5.jpg" alt="oh no" style="display:none;"height="200" width="auto">
+				<img class="img1" src = "test1.jpg" alt="oh no" width="200" height="auto">
+				<img class="img2" src = "test2.jpg" alt="oh no" style="display:none;" width="200" height="auto">
+				<img class="img3" src = "test3.jpg" alt="oh no" style="display:none;"width="200" height="auto">
+				<img class="img4" src = "test4.jpg" alt="oh no" style="display:none;"width="200" height="auto">
+				<img class="img5" src = "test5.jpg" alt="oh no" style="display:none;"width="200" height="auto">
 			</div>
 			<div id ="project2">
-				<img class="img1" src = "test1.jpg" alt="oh no" height="200" width="auto">
-				<img class="img2" src = "test2.jpg" alt="oh no" style="display:none;" height="200" width="auto">
-				<img class="img3" src = "test3.jpg" alt="oh no" style="display:none;"height="200" width="auto">
+				<img class="img6" src = "test1.jpg" alt="oh no" width="200" height="auto">
+				<img class="img7" src = "test2.jpg" alt="oh no" style="display:none;" width="200" height="auto">
+				<img class="img8" src = "test3.jpg" alt="oh no" style="display:none;"width="200" height="auto">
 			</div>
+			<div id ="project3">
+				<img class="img9" src = "test3.jpg" alt="oh no" width="200" height="auto">
+				<img class="img10" src = "test4.jpg" alt="oh no" style="display:none;"width="200" height="auto">
+			</div>
+
 		</div>
 	</body>
 
