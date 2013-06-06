@@ -1,5 +1,5 @@
 ##About
-mini-gal is a lightweight image gallery that can scale across HTML divs.
+mini-gal is a lightweight, flexible image gallery.  The plugin extends over unlimted projects to rotate through a varying number of images in each project.  
 
 ##References
 * [jQuery on click change image](http://stackoverflow.com/questions/1115858/jquery-switching-between-several-images-on-click)

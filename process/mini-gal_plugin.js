@@ -1,13 +1,3 @@
-/*//expand thumbnail
-	$("#first img").click(function(){
-		$("#first img").css("height","500");
-	});
-//reduce thumbnail
-	$("#backdrop").click(function(){
-		$("#first img").css("height","200");
-});
-*/
-
 (function($){
 
 	$.fn.mini_gal = function(){
@@ -21,12 +11,21 @@
 		    return result;
 			}
 
+		//expand thumbnail - need to hide all others so float doesn't screw up?
+		$(this).click(function(){
+			$(this).children("img").css({width:624, height:"auto"});
+		});
+
+		var gallery = $(this).children("img");
+
+		//reduce thumbnail
+		$("#backdrop").click(function(){
+			$(gallery).css({width:200, height:"auto"});
+		});
+
+		//rotate through images
 		var arrName = [];
 
-		//this this should only pull by div, but is pulling all images! try .each? don't pull img in html?
-		//review logs and dynamic html - strange things are getting applied
-		//don't know if display with fuck with things?
-		//worked as ("project1" img) explicit target and image.
 		$(this).children("img").each(function(){
 			arrName.push($(this).attr("class"))
 			});
@@ -43,11 +42,6 @@
 		arrClassOffset.push(offsetVal);
 
 		var arrZip = zip(arrClass,arrClassOffset);
-		console.log(arrName);
-		console.log(arrClass);
-		console.log(arrClassOffset);
-		console.log(arrZip);
-
 
 		$.each(arrZip, function(index, value) {
 			$(value[0]).click(function() {

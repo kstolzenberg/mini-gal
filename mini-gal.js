@@ -1,61 +1,56 @@
-function zip(arrayA, arrayB) {
-    var length = Math.min(arrayA.length, arrayB.length);
-    var result = [];
-    for (var n = 0; n < length; n++) {
-        result.push([arrayA[n], arrayB[n]]);
-    }
-    return result;
-}
+(function($){
 
-$(document).ready(function(){
+	$.fn.mini_gal = function(){
 
-	//expand thumbnail
-	$("#first img").click(function(){
-		$("#first img").css("height","500");
-	});
+		function zip(arrayA, arrayB) {
+		    var length = Math.min(arrayA.length, arrayB.length);
+		    var result = [];
+		    for (var n = 0; n < length; n++) {
+		        result.push([arrayA[n], arrayB[n]]);
+		    }
+		    return result;
+			}
 
-	//reduce thumbnail
-	$("#backdrop").click(function(){
-		$("#first img").css("height","200");
-	});
-
-	//below loops over images in div
-	
-	var First = [];
-
-	$("#first img").each(function(){
-		First.push($(this).attr("class"))});
-
-	var FirstArr = [];
-	var FirstArr2 = [];
-	
-	$.each(First, function(index, value) {
-  		FirstArr.push("."+value);
+		//expand thumbnail - need to hide all others so float doesn't screw up?
+		$(this).click(function(){
+			$(this).children("img").css({width:624, height:"auto"});
 		});
 
-	var FirstArr2 = FirstArr.slice(0);
-	var FirstVal  = FirstArr2.shift();
-	FirstArr2.push(FirstVal);
+		var gallery = $(this).children("img");
 
-	var ArrResult = zip(FirstArr,FirstArr2);
-	console.log(ArrResult);
+		//reduce thumbnail
+		$("#backdrop").click(function(){
+			$(gallery).css({width:200, height:"auto"});
+		});
 
+		//rotate through images
+		var arrName = [];
 
-	$.each(ArrResult, function(index, value) {
-		$(value[0]).click(function() {
-			$(this).hide();
-			$(value[1]).show();
+		$(this).children("img").each(function(){
+			arrName.push($(this).attr("class"))
 			});
-	});
+
+		var arrClass = [];
+		var arrClassOffset = [];
+			
+		$.each(arrName, function(index, value) {
+			arrClass.push("."+value);
+			});
+
+		var arrClassOffset = arrClass.slice(0);
+		var offsetVal  = arrClassOffset.shift();
+		arrClassOffset.push(offsetVal);
+
+		var arrZip = zip(arrClass,arrClassOffset);
+
+		$.each(arrZip, function(index, value) {
+			$(value[0]).click(function() {
+				$(this).hide();
+				$(value[1]).show();
+				});
+			});
+	};
+
+}(jQuery));
 	
-
-});
-
-//wrap into a function that accepts a div as input
-//opacity hover on image? need to build in actually grid to get scale
-//need to add thumbnail-basic lightbox uses jquery to change a divs .css("displace","block") to show/not show
-//close big image = click on background and change css back to thumbnail>bound to overall div!
-//need a spacer? right now skipping over first image? or the first image is always a thumb? because on click is trigger 2 things
-//add html image caption to the side of each image, with title and description.
-//others: use separate thumbnail images, no css, then inject css with jquery with the next one? would also solve event binding?
 
