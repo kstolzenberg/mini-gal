@@ -1,6 +1,8 @@
 ##About
 mini-gal is a lightweight, flexible image gallery.  The plugin extends over unlimted projects to rotate through a varying number of images in each project.  
 
+[demo - in progress](http://kstolzenberg.github.io/mini-gal/)
+
 ##References
 * [jQuery on click change image](http://stackoverflow.com/questions/1115858/jquery-switching-between-several-images-on-click)
 * [jQuery .click rotate through multiple images](http://stackoverflow.com/questions/12073908/rotate-images-onclick-with-jquery-swap-change-image-with-click)
